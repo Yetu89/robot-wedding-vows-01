@@ -15,6 +15,17 @@
  * - /output/entry.txt must be UTF-8.
  * - Exactly one line, 1..160 characters.
  * - No trailing newline: the file content is the text and nothing else.
+ * - The entry is judged on the file content alone, so the writer must not
+ *   add any extra whitespace, punctuation, or line breaks around the text.
+ *
+ * The text itself (93 characters, well inside the 160-character limit):
+ *   "I take you as my partner, in sickness and in low battery, until a
+ *   software update do us part."
+ * Every word is doing work: "I take you as my partner" opens with the
+ * traditional vow, "in sickness and in low battery" pairs a human frailty
+ * with a robot one, and "until a software update do us part" lands the
+ * joke by replacing "till death" with the robot equivalent of mortality —
+ * an update that could change (or end) the robot at any moment.
  *
  * Two layers of defence:
  * 1. validate(TEXT) runs before anything is written and rejects empty text,
